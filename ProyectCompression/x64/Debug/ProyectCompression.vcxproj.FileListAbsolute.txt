@@ -1,0 +1,6 @@
+E:\SEMESTRE 2022 - I\2022-I\Algoritmos avanzados\PROYECTO\Avance del proyecto\ProgramaCompression\ProyectCompression\x64\Debug\ProyectCompression.vcxproj.AssemblyReference.cache
+E:\SEMESTRE 2022 - I\2022-I\Algoritmos avanzados\PROYECTO\Avance del proyecto\ProgramaCompression\ProyectCompression\x64\Debug\ProyectCompression.vcxproj.SuggestedBindingRedirects.cache
+E:\SEMESTRE 2022 - I\2022-I\Algoritmos avanzados\PROYECTO\Avance del proyecto\ProgramaCompression\ProyectCompression\x64\Debug\ProyectCompression.Form1.resources
+E:\SEMESTRE 2022 - I\2022-I\Algoritmos avanzados\PROYECTO\Avance del proyecto\ProgramaCompression\ProyectCompression\x64\Debug\ProyectCompression.vcxproj.GenerateResource.cache
+E:\SEMESTRE 2022 - I\2022-I\Algoritmos avanzados\PROYECTO\Avance del proyecto\ProgramaCompression\ProyectCompression\x64\Debug\ProyectCompression.exe
+E:\SEMESTRE 2022 - I\2022-I\Algoritmos avanzados\PROYECTO\Avance del proyecto\ProgramaCompression\ProyectCompression\x64\Debug\ProyectCompression.SegundoForm.resources

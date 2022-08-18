@@ -1,4 +1,5 @@
 #pragma once
+#include "SegundoForm.h"
 
 namespace CppCLRWinFormsProject {
 
@@ -34,6 +35,17 @@ namespace CppCLRWinFormsProject {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Panel^ panel1;
+	protected:
+	private: System::Windows::Forms::Panel^ panel3;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Panel^ panel2;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Button^ btn_iniciar;
+
+
+	protected:
+
 
 	private:
 		/// <summary>
@@ -48,12 +60,107 @@ namespace CppCLRWinFormsProject {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"Form1";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->btn_iniciar = (gcnew System::Windows::Forms::Button());
+			this->panel1->SuspendLayout();
+			this->panel3->SuspendLayout();
+			this->panel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->SuspendLayout();
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::SteelBlue;
+			this->panel1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel1->Controls->Add(this->panel3);
+			this->panel1->Location = System::Drawing::Point(95, 42);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(600, 281);
+			this->panel1->TabIndex = 1;
+			// 
+			// panel3
+			// 
+			this->panel3->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->panel3->Controls->Add(this->label1);
+			this->panel3->Location = System::Drawing::Point(306, 53);
+			this->panel3->Name = L"panel3";
+			this->panel3->Size = System::Drawing::Size(262, 149);
+			this->panel3->TabIndex = 0;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::SteelBlue;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Arial Black", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label1->Location = System::Drawing::Point(16, 13);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(221, 120);
+			this->label1->TabIndex = 0;
+			this->label1->Text = L"ENCRIPTACION Y \r\nCOMPRESION DE\r\nARCHIVOS DE \r\nMANERA SEGURA";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
+			// panel2
+			// 
+			this->panel2->BackColor = System::Drawing::Color::GhostWhite;
+			this->panel2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->panel2->Controls->Add(this->pictureBox1);
+			this->panel2->Controls->Add(this->btn_iniciar);
+			this->panel2->Cursor = System::Windows::Forms::Cursors::Arrow;
+			this->panel2->ForeColor = System::Drawing::Color::Black;
+			this->panel2->Location = System::Drawing::Point(126, 24);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(248, 315);
+			this->panel2->TabIndex = 2;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Location = System::Drawing::Point(26, 30);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(176, 143);
+			this->pictureBox1->TabIndex = 1;
+			this->pictureBox1->TabStop = false;
+			// 
+			// btn_iniciar
+			// 
+			this->btn_iniciar->BackColor = System::Drawing::Color::LightBlue;
+			this->btn_iniciar->Font = (gcnew System::Drawing::Font(L"Arial Black", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_iniciar->Location = System::Drawing::Point(30, 239);
+			this->btn_iniciar->Name = L"btn_iniciar";
+			this->btn_iniciar->Size = System::Drawing::Size(173, 31);
+			this->btn_iniciar->TabIndex = 0;
+			this->btn_iniciar->Text = L"INICIAR";
+			this->btn_iniciar->UseVisualStyleBackColor = false;
+			this->btn_iniciar->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+			// 
+			// Form1
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(790, 364);
+			this->Controls->Add(this->panel2);
+			this->Controls->Add(this->panel1);
+			this->Name = L"Form1";
+			this->Text = L"Form1";
+			this->panel1->ResumeLayout(false);
+			this->panel3->ResumeLayout(false);
+			this->panel3->PerformLayout();
+			this->panel2->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		//this->Close();
+		ProyectCompression::SegundoForm^ segundoForm = gcnew ProyectCompression::SegundoForm();
+		segundoForm->Show();
+	}
+};
 }
